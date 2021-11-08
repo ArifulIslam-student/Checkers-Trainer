@@ -80,7 +80,7 @@ DATABASES = {
         #'USER': 'micahbrown2016',
         #'PASSWORD': 'd5K6TKUtf4',
         #'HOST': 'lamp.cse.fau.edu',
-        #'PORT': '32',
+        #'PORT': '3306',
     }
 }
 
