@@ -62,11 +62,11 @@
       </div>
   <html>
     <head>
-      <script src="jquery-1.10.2.min.js"></script>
-      <script src="driver.js"></script>
-      <script src="checkers.js"></script>
-      <script src="jqcheckers.js"></script>
-      <link rel="stylesheet" type="text/css" href="pieces.css">
+      <script src="{% static 'jquery-1.10.2.min.js' %}"></script>
+      <script src="{% static 'driver.js' %}"></script>
+      <script src="{% static 'checkers.js' %}"></script>
+      <script src="{% static 'jqcheckers.js' %}"></script>
+      <link rel="stylesheet" type="text/css" href="{% static 'pieces.css' %}">
     </head>
     <body>
       <span class="row row-a">
