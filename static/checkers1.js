@@ -2,14 +2,14 @@ var board, currentPlayer, otherPlayer, enemyPieceJumped, winner, error_message, 
 
 var resetBoard = function () {
   board = [
-    [' X ', ' X ', ' X ', 'wht', ' X ', 'wht', ' X ', 'wht'],
-    ['red', ' X ', 'wht', ' X ', 'wht', ' X ', 'wht', ' X '],
+    [' X ', 'wht', ' X ', 'wht', ' X ', 'wht', ' X ', 'wht'],
+    ['wht', ' X ', 'wht', ' X ', 'wht', ' X ', 'wht', ' X '],
     [' X ', 'wht', ' X ', 'wht', ' X ', 'wht', ' X ', 'wht'],
     [' X ', ' X ', ' X ', ' X ', ' X ', ' X ', ' X ', ' X '],
     [' X ', ' X ', ' X ', ' X ', ' X ', ' X ', ' X ', ' X '],
     ['red', ' X ', 'red', ' X ', 'red', ' X ', 'red', ' X '],
-    [' X ', 'wht', ' X ', 'red', ' X ', 'red', ' X ', 'red'],
-    [' X ', ' X ', 'red', ' X ', 'red', ' X ', 'red', ' X ']
+    [' X ', 'red', ' X ', 'red', ' X ', 'red', ' X ', 'red'],
+    ['red', ' X ', 'red', ' X ', 'red', ' X ', 'red', ' X ']
   ];
 
   currentPlayer = 'wht';

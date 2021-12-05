@@ -49,6 +49,7 @@ $(document).on('winnerNamed', function(e, winner) {
 // };
 
 var getMove = function() {
+
   var starting = prompt(currentPlayer + ", what piece would you like to move? Row, column (e.g., A2).").trim();
   quit(starting);
   var startingParsed = parseAnswer(starting);
@@ -64,6 +65,37 @@ var getMove = function() {
   return move_object;
 }
 
+var getMoveAI = function() {
+  if(currentPlayer === 'wht'){
+    var starting = prompt("It's the AI's turn").trim();
+    var startingParsed; 
+    var endingParsed;
+    var move_object = { //translates the moves
+      startingRow: startingParsed[0],
+      startingCol: startingParsed[1],
+      endingRow: endingParsed[0],
+      endingCol: endingParsed[1]
+    }
+    return move_object; //returns so moves can be executed 
+
+  }else{
+    var starting = prompt(currentPlayer + ", what piece would you like to move? Row, column (e.g., A2).").trim();
+  quit(starting); //see if player wants to quit
+  var startingParsed = parseAnswer(starting); //gets the piece to move
+  var ending = prompt(currentPlayer + ", to what spot would you like to move? Row, column (e.g., A2).").trim();
+  quit(ending); //see if player wants to quit
+  var endingParsed = parseAnswer(ending); //gets where the piece should go to 
+  var move_object = { //translates the moves
+    startingRow: startingParsed[0],
+    startingCol: startingParsed[1],
+    endingRow: endingParsed[0],
+    endingCol: endingParsed[1]
+  }
+  return move_object; //returns so moves can be executed 
+  }
+  
+}
+
 var quit = function(string) {
   if (string[0] === 'q') {
       endGame();
@@ -75,10 +107,10 @@ var endGame = function() {
   play();
 };
 
-var parseAnswer = function(string) {
+var parseAnswer = function(string) { //gets which square to move to 
   answer = []
   if (string.length===2) {
-    answer.push(charToNum[string[0].toLowerCase()]);
+    answer.push(charToNum[string[0].toLowerCase()]); //goes to charToNum array
     answer.push(parseInt(string[1]));
   } else {
     alert("Invalid entry for start point");

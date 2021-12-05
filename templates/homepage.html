@@ -64,14 +64,14 @@
     <head>
       <script src="{% static 'jquery-1.10.2.min.js' %}"></script>
       <script src="{% static 'driver.js' %}"></script>
-      <script src="{% static 'checkers.js' %}"></script>
+      <script src="{% static 'checkers1.js' %}"></script>
       <script src="{% static 'jqcheckers.js' %}"></script>
-      <link rel="stylesheet" type="text/css" href="{% static 'pieces.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static 'pieces1.css' %}">
     </head>
-    <body>
+    <div class = "checkersGame">
       <span class="row row-a">
         <span class="col col-0 empty"></span>
-        <span class="col col-1"></span>
+        <span class="col col-1" style="width: 50px!important;"></span>
         <span class="col col-2 empty"></span>
         <span class="col col-3"></span>
         <span class="col col-4 empty"></span>
@@ -164,7 +164,7 @@
   
       <button class="start">Start the game</button>
     </main><!-- /.container -->
-  </body>
+  </div>
   </html>
     <!-- Bootstrap core JavaScript
     ================================================== -->
