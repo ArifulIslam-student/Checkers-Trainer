@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'jquery',
+    'checkersAI',
 
 ]
 
@@ -78,10 +79,10 @@ WSGI_APPLICATION = 'checkersAI.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'test',
+        'NAME': 'checkerdatabase',
         'HOST': 'localhost',
-        'USER': 'aislam2017@localhost',
-        'PASSWORD': 'G6OcC+j24o',
+        'USER': 'root',
+        'PASSWORD': '@19990629ai',
         'PORT': '3306',
     }
 }
