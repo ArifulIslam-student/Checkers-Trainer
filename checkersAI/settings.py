@@ -77,12 +77,12 @@ WSGI_APPLICATION = 'checkersAI.wsgi.application'
 
 DATABASES = {
     'default': {
-        #'ENGINE': 'django.db.backends.mysql',
-        #'NAME': 'micahbrown2016',
-        #'USER': 'micahbrown2016',
-        #'PASSWORD': 'd5K6TKUtf4',
-        #'HOST': 'lamp.cse.fau.edu',
-        #'PORT': '3306',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'test',
+        'HOST': 'localhost',
+        'USER': 'aislam2017@localhost',
+        'PASSWORD': 'G6OcC+j24o',
+        'PORT': '3306',
     }
 }
 
