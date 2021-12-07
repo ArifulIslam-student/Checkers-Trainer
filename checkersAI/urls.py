@@ -17,11 +17,14 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url
 from django.views.generic.base import TemplateView
-
+#from checkersAI import views
+from . import views
 
 urlpatterns = [
-    url(r'^$', TemplateView.as_view(template_name='signin.html'), name='signin'),
-    url(r'homepage/', TemplateView.as_view(template_name='homepage.html'), name='homepage'),
-    url(r'signup/', TemplateView.as_view(template_name='signup.html'), name='signup')
-
+    #url(r'^$', TemplateView.as_view(template_name='signin.html'), name='signin'),
+    #url(r'homepage/', TemplateView.as_view(template_name='homepage.html'), name='homepage'),
+    #url(r'signup/', TemplateView.as_view(template_name='signup.html'), name='signup'),
+    path('', views.Login, name='signin'),
+    path('home', views.Home, name='homepage'),
+    path('regestar', views.InsertUser, name='signup'),
 ]

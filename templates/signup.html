@@ -27,7 +27,8 @@
         <h2>Sign Up Page</h2>
         <p class="lead">Please put in you user id and password to sign up.</p>
       </div>
-
+      <form method="POST" >  
+        {% csrf_token %} 
       <div class="row">
         
         <div class="col-md-8 order-md-1">
@@ -35,16 +36,24 @@
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="firstName">User ID</label>
-                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                <input type="text" class="form-control" name="userid" placeholder="" value="" required>
                 <div class="invalid-feedback">
                   Valid user id is required.
                 </div>
               </div>
               <div class="col-md-6 mb-3">
                 <label for="lastName">Password</label>
-                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                <input type="text" class="form-control" name="userpassword" placeholder="" value="" required>
                 <div class="invalid-feedback">
                   Valid password is required.
+                </div>
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <label for="lastName">Inital Difficulty</label>
+                <input type="text" class="form-control" name="aidifficulty" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  Valid difficulty is required.
                 </div>
               </div>
             </div>
@@ -54,7 +63,7 @@
           </form>
         </div>
       </div>
-
+      </form>
     </div>
 
     <!-- Bootstrap core JavaScript
