@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="{% static '/docs/4.0/assets/img/favicons/favicon.ico' %}">
 
-    <title>Starter Template for Bootstrap</title>
+    <title>Home</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
 
@@ -33,7 +33,7 @@
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="{% url 'signin' %}">Logout</a>
           </li>
           <li class="nav-item">
             <a class="nav-link disabled" href="#">Disabled</a>
@@ -55,10 +55,14 @@
     </nav>
 
     <main role="main" class="container">
-
+      {% csrf_token %} 
       <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+        <h1>Welcome {{getuserid}}</h1>
+        {% for login in user %}  
+        {%if getuserid == login.userid%}
+        <p class="lead">Your current AI is at level {{login.aidifficulty}}</p>
+        {%endif%}
+        {% endfor %} 
       </div>
   <html>
     <head>

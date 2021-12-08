@@ -5,11 +5,23 @@ from django.contrib import messages
 
 
 def Login(request):
-    return render(request, 'signin.html')
+    users = Userstable.objects.all()
+    if request.method == "POST":
+        getuserids = request.POST.get('userid')
+        getuserpasswords = request.POST.get('userpassword')
+        for login in users:
+            if getuserids == login.userid and getuserpasswords == login.userpassword:
+                return render(request, 'homepage.html', {'user': users, 'getuserid': getuserids, 'getuserpassword': getuserpasswords})
+
+        return render(request, 'signin.html', {'user': users, 'getuserid': getuserids, 'getuserpassword': getuserpasswords})
+
+    else:
+        return render(request, 'signin.html', {'user': users})
 
 
 def Home(request):
-    return render(request, 'homepage.html')
+    users = Userstable.objects.all()
+    return render(request, 'homepage.html', {'user': users})
 
 
 def InsertUser(request):
