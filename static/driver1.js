@@ -65,41 +65,6 @@ $(document).on('winnerNamed', function(e, winner) {
   //return move_object;
 //}
 
-var getMoveAI = function() {
-  if(currentPlayer === 'wht'){
-    var starting = prompt("It's the AI's turn").trim();
-    
-    //trigger to views.py for variables 
-
-
-    //end of trigger to views.py
-    var startingParsed; 
-    var endingParsed;
-    //need to get the starting row and column & ending row and column 
-    var move_object = { //translates the moves
-      startingRow: startingParsed[0],
-      startingCol: startingParsed[1],
-      endingRow: endingParsed[0],
-      endingCol: endingParsed[1]
-    }
-    return move_object; //returns so moves can be executed 
-
-  }else{
-    var starting = prompt(currentPlayer + ", what piece would you like to move? Row, column (e.g., A2).").trim();
-    quit(starting); //see if player wants to quit
-    var startingParsed = parseAnswer(starting); //gets the piece to move
-    var ending = prompt(currentPlayer + ", to what spot would you like to move? Row, column (e.g., A2).").trim();
-    quit(ending); //see if player wants to quit
-    var endingParsed = parseAnswer(ending); //gets where the piece should go to 
-    var move_object = { //translates the moves
-      startingRow: startingParsed[0],
-      startingCol: startingParsed[1],
-      endingRow: endingParsed[0],
-      endingCol: endingParsed[1]
-    }
-    return move_object; //returns so moves can be executed 
-  }
-}
 
 var quit = function(string) {
   if (string[0] === 'q') {

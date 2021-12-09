@@ -12,8 +12,8 @@ var resetBoard = function () {
     ['red', ' X ', 'red', ' X ', 'red', ' X ', 'red', ' X ']
   ];
 
-  currentPlayer = 'wht';
-  otherPlayer = 'red';
+  currentPlayer = 'red';
+  otherPlayer = 'wht';
   enemyPieceJumped = [];
   dead = { 
     white: 0,

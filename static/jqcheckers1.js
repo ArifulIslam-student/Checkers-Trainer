@@ -41,7 +41,7 @@ $(document).on('ready', function(){
 	  resetBoard();
 	  displayBoard(board);
 	  $('.round').text("Round:" + round);
-	  if(currentPlayer === 'red'){
+	  if(currentPlayer === 'wht'){
 		$('.playerUp').text("It's the AI's turn");
 
 	  }else{
@@ -50,7 +50,7 @@ $(document).on('ready', function(){
 	});
 
 	$('.col').on('click', function (e) {
-		if(currentPlayer === 'red'){
+		if(currentPlayer === 'wht'){
 			$('.playerUp').text("It's the AI's turn");
 	
 		  }else{
@@ -75,7 +75,7 @@ $(document).on('ready', function(){
 
 	$(document).on('updateRound', function(e, round) {
 	  $('.round').text("Round:" + round);
-	  if(currentPlayer === 'red'){
+	  if(currentPlayer === 'wht'){
 		$('.playerUp').text("It's the AI's turn");
 
 	  }else{
