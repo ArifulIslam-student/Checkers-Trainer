@@ -67,9 +67,38 @@
   <html>
     <head>
       <script src="{% static 'jquery-1.10.2.min.js' %}"></script>
-      <script src="{% static 'driver.js' %}"></script>
+      <!-- driver.js's getMove in html -->
+      <script>  
+        var getMove = function(chosen) {
+          if(currentPlayer === 'red'){
+            //python code example - value, new_board = minimax(board, {-login.aidifficulty-}, RED)
+            
+          
+
+            round = updateRound(round); //update the round to end
+            swap(currentPlayer,otherPlayer); //change player turn
+            $(document).trigger('updateRound', round);
+            $(document).trigger('boardChange'); //redisplay the board after the AI run
+          }else{
+            var row = $('.row').index(chosen.parent());
+	          var col = chosen.parent().children().index(chosen);
+	          if ( Object.keys(moveObject).length == 0 ) {
+	            moveObject.startingRow = row;
+	           moveObject.startingCol = col;
+	          } else if ( Object.keys(moveObject).length == 2 ) {
+	            moveObject.endingRow = row;
+	            moveObject.endingCol = col;
+	            attemptMove(moveObject.startingRow,moveObject.startingCol,moveObject.endingRow,moveObject.endingCol);
+	            moveObject = {};
+	          }
+
+          }
+	        
+      };
+      </script>
+      <script src="{% static 'driver1.js' %}"></script>
       <script src="{% static 'checkers1.js' %}"></script>
-      <script src="{% static 'jqcheckers.js' %}"></script>
+      <script src="{% static 'jqcheckers1.js' %}"></script>
       <link rel="stylesheet" type="text/css" href="{% static 'pieces1.css' %}">
     </head>
     <div class = "checkersGame">

@@ -19,7 +19,7 @@
   </head>
 
   <body class="text-center">
-    <form method="POST" class="form-signin">
+    <form method="POST" class="form-signin"> <!--button trigers form method @ views.insertuser line 29-->
       {% csrf_token %} 
       <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
       <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
@@ -28,7 +28,7 @@
       <label for="inputPassword" class="sr-only">Password</label>
       <input name="userpassword" class="form-control" placeholder="Password" required>
       
-      <button class="btn btn-primary btn-lg btn-block" type="submit">Login button</button>
+      <button class="btn btn-primary btn-lg btn-block" type="submit">Login button</button> 
       <h1 class="h3 mb-3 font-weight-normal">Don't have an account?</h1>
       <a class="btn btn-lg btn-primary btn-block" href="{% url 'signup' %}">Sign up</a>
       <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>

@@ -25,6 +25,6 @@ urlpatterns = [
     #url(r'homepage/', TemplateView.as_view(template_name='homepage.html'), name='homepage'),
     #url(r'signup/', TemplateView.as_view(template_name='signup.html'), name='signup'),
     path('', views.Login, name='signin'),
-    path('home', views.Home, name='homepage'),
+    path('home', views.Home, name='homepage'), #doesn't work
     path('regestar', views.InsertUser, name='signup'),
 ]
