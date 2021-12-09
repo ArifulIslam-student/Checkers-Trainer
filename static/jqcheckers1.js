@@ -18,7 +18,7 @@ var numToChar = ["a", "b", "c", "d", "e", "f", "g", "h"];
 
 var moveObject = {};
 
-//var getMove = function(chosen) {
+//var getMove = function(chosen) { //now in homepage.html
 	//var row = $('.row').index(chosen.parent());
 	//var col = chosen.parent().children().index(chosen);
 	//if ( Object.keys(moveObject).length == 0 ) {
@@ -38,6 +38,7 @@ var moveObject = {};
 $(document).on('ready', function(){
   
 	$('.start').on('click', function(){
+	  if ($('.start').html("Start The Game")) $('.start').html("Restart The Game");
 	  resetBoard();
 	  displayBoard(board);
 	  $('.round').text("Round:" + round);

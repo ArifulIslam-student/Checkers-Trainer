@@ -27,4 +27,6 @@ urlpatterns = [
     path('', views.Login, name='signin'),
     path('home', views.Home, name='homepage'), #doesn't work
     path('regestar', views.InsertUser, name='signup'),
+    path('ai_turn', views.getJavascriptVariable, name='ai_turn'),
+
 ]

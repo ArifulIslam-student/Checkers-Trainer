@@ -10,11 +10,13 @@
 .row {
   height: 50px;
   display: inline-block;
-  vertical-align: top;
+  text-align: center;
 }
 
 .col-1 {
   max-width: 100%!important;
+  text-align: center;
+
 }
 
 .empty {

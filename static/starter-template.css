@@ -6,11 +6,18 @@ body {
 }
 .starter-template {
   padding: 3rem 1.5rem;
+}
+
+div{
+  padding-right: 20%;
+}
+
+
+.start{
+  vertical-align: top;
   text-align: center;
 }
 
 .checkersGame {
-  position: fixed;
-  text-align: center;
-  width: 200%;
+  padding: 3rem 1.5rem;
 }
