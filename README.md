@@ -6,10 +6,10 @@ Install mysql workbench and server
 Follow this video https://www.youtube.com/watch?v=u96rVINbAUI 
 for root password use @19990629ai
 
-Install visual studio code if you don't have it
-
 After installation there should be a local instance, open the connection
 Create a new schema called checkerdatabase
+
+Install visual studio code if you don't have it
 
 Download the zip folder from the Github
 Extract all from the zip and open in visual studio
